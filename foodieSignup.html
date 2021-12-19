@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html.html">
+        <button type="button" class="btn btn-secondary">HOME</button>
+      </a>
+      <a class="navbar-brand" href="foodieLogin.html">
+        <button type="button" class="btn btn-success">Login</button>
+      </a>
+      <a class="navbar-brand" href="foodieSignup.html">
+        <button type="button" class="btn btn-danger">Signup</button>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="foodieStore.html">Available Menu</a></li>
+              <li><a class="dropdown-item" href="foodieAbout.html">About US</a></li>
+              <li>
+              <li><a class="dropdown-item" href="foodieDetailMenu.html">Full menu</a></li>
+              <li>
+              <li><a class="dropdown-item" href="foodieContact.html">Contact Us</a></li>
+              <li>
+
+            </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Creat Your Account</h2>
+    <form action="#">
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" class="form-control" id="username" placeholder="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+      </div>
+      <div class="col-md-12">
+        <div class="alert">
+          <button type="submit" class="btn btn-lg bg-info" onclick="savedata();">
+            <a href="#" class="alert-link" data-bs-toggle="modal" data-bs-target="#myModal">submit</a>.
+        </div>
+        </button>
+      </div>
+
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title">Message</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              details submited
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+<script>
+
+  function savedata() {
+    let username, email, psw;
+    username = document.getElementById("username").value;
+    email = document.getElementById("email").value;
+    pdw = document.getElementById("pwd").value;
+
+
+    localStorage.setItem("username", username)
+
+    localStorage.setItem("email", email)
+
+    localStorage.setItem("pwd", pwd)
+  }
+
+</script>
+
+</html>
