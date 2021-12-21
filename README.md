@@ -13,3 +13,4 @@ To check Live demo [click here](https://rahultherawat.com)
  * [x] JavaScript
  * [x] Bootstrap
  * [x] cordova  
+ * [x] Jquery Mobile
